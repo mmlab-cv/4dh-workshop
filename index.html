@@ -53,8 +53,80 @@
 
     <!-- Call Section -->
     <section id="call">
-      <h2>Call for papers</h2>
-      <h3>To be announced</h3>
+      <h2>Call for Papers</h2>
+
+<p>
+  The <b>4D Human Workshop (4DH)</b> invites submissions on methods and applications for reconstructing temporally
+  consistent 3D human models from image and video data.
+</p>
+
+<p>
+  We welcome contributions addressing a broad range of topics related to 4D human reconstruction, including:
+</p>
+
+<ul>
+  <li>4D human reconstruction from monocular or multi-view video</li>
+  <li>Parametric human models (e.g., SMPL and related extensions)</li>
+  <li>Neural representations (NeRF, 3D Gaussian Splatting, implicit models)</li>
+  <li>Modeling of human motion and temporal consistency</li>
+  <li>Human appearance, rendering, and relighting</li>
+  <li>Multi-person and interaction modeling</li>
+  <li>Datasets and benchmarks for dynamic human capture</li>
+  <li>Applications in AR/VR, robotics, healthcare, and sports</li>
+</ul>
+
+<p>
+  The workshop will be a half-day event and accepts two types of submissions: <b>original contributions</b> and
+  <b>previously published papers</b>.
+</p>
+
+<h3>Original Contributions</h3>
+<p>
+  Original papers will be included in the <b>ICIP 2026 proceedings</b> and will undergo a <b>double-blind peer review</b> process.
+</p>
+<ul>
+  <li>Papers must not exceed <b>5 pages of technical content</b>, including all figures and references</li>
+  <li>An optional <b>6th page</b> may be used for references only</li>
+  <li>Submissions must follow the ICIP 2026 format</li>
+  <li>Authors are encouraged to review the ICIP submission guidelines:
+    <a href="https://2026.ieeeicip.org/author-kit/">Author Kit</a>
+  </li>
+</ul>
+
+<h3>Previously Published Papers</h3>
+<p>
+  Previously published work can be presented as <b>posters</b> during the workshop and will not be included in the proceedings.
+</p>
+<ul>
+  <li>Submissions will be selected based on relevance and available presentation capacity</li>
+  <li>Contributors are asked to submit a <b>2-page abstract</b> to the organizers at:
+    <a href="#" class="email-link"></a>
+  </li>
+</ul>
+
+<h3>Submission Instructions</h3>
+<p>
+  Unpublished papers must be submitted through the official ICIP submission system:
+</p>
+<p>
+  <a href="https://icip2026.exordo.com/">https://icip2026.exordo.com/</a>
+</p>
+<p>
+  Authors should select the <b>Satellite Workshop Papers</b> track and choose the
+  <b>4D Human Workshop</b> from the list of topics.
+</p>
+
+<p>
+  Please note that <b>no rebuttal phase</b> will be included in the review process.
+</p>
+
+<h3>Important Dates</h3>
+<ul>
+  <li><b>Paper submission deadline:</b> May 13, 2026</li>
+  <li><b>Acceptance notification:</b> June 10, 2026</li>
+  <li><b>Camera-ready deadline:</b> July 1, 2026</li>
+  <li><b>Author registration deadline:</b> July 16, 2026</li>
+</ul>
     </section>
 
     <!-- Schedule Section -->
@@ -89,13 +161,21 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>For further inquiries, please email us at
-        <script>
-          const u = "giulia.martinelli-2";
-          const d = "unitn.it";
-          document.write(`<a href="mailto:${u}@${d}">${u}@${d}</a>`);
-        </script>.
+       <a href="#" class="email-link"></a>
       </p>
     </section>
   </div>
 </body>
+
+<script>
+  const u = "giulia.martinelli-2";
+  const d = "unitn.it";
+  const email = `${u}@${d}`;
+
+  document.querySelectorAll(".email-link").forEach(link => {
+    link.href = `mailto:${email}`;
+    link.textContent = email;
+  });
+</script>
+
 </html>
