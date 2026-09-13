@@ -1,436 +1,184 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>
-   4DH@ICIP26
-  </title>
-<link href="styles.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4DH@ICIP26</title>
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
 <body>
-<!-- Hero Section -->
-<section class="hero">
-<h1>
-    1st Workshop on 4D Humans (4DH)
-   </h1>
-<p class="subtitle">
-    ICIP 2026 Satellite Workshop
-   </p>
-<!-- <p class="details">
-      <i class="fa fa-calendar"></i> June 11 (Wed), 2025 &nbsp;
-      <i class="fa fa-map-marker"></i> Room 105B, Music City Center, Nashville, Tennessee
-    </p> -->
-</section>
-<!-- Main Content Container -->
-<div class="container">
-<!-- Summary Section -->
-<section id="summary">
-<h2>
-     Summary
-    </h2>
-<p>
-     4D Humans refers to the reconstruction of temporally consistent 3D human models, the 4th dimension being time.
- Starting from monocular or multi-view image sequences, the objective is to recover human shape, pose, motion, and appearance in a coherent representation.
-    </p>
-<p>
-     Despite significant progress, current approaches follow different modeling paradigms, each with clear limitations.
-  Parametric models such as SMPL provide structured and controllable representations but lack geometric detail,
-  while neural methods such as NeRF and 3D Gaussian Splatting improve visual fidelity but struggle with
-  controllability and canonical representations. High-quality digital humans achieve strong realism, but rely on
-  complex acquisition setups or manual effort.
-    </p>
-<p>
-<p>
-      The 4D Human Workshop (4DH) focuses on image- and video-based approaches to 4D human reconstruction, addressing
-  open challenges and emerging solutions toward realistic, controllable, and scalable human representations.
-     </p>
-</p>
-</section>
-<!-- Speakers Section -->
-<section id="speakers">
-<h2>
-     Keynote Speaker
-    </h2>
-<div class="speaker"><div style="display:flex; align-items:flex-start; gap:24px; flex-wrap:wrap;"><img alt="Umberto Castellani" src="assets/imgs/umberto_castellani.png" style="max-width:220px; width:100%; height:auto;"/><div style="flex:1; min-width:260px;"><h3>Umberto Castellani</h3><p><b>University of Verona, Italy</b></p><p>Umberto Castellani is Full Professor at the Computer Science Department of the University of Verona (Italy). His research focuses on 3D data processing at the intersection of computer vision, graphics, and machine learning, with particular expertise in 3D shape analysis and reconstruction from several acquisition systems. His work includes geometric methods for non-rigid object modeling, matching, and simulation, with a specialization in generative models for simulating the geometric and dynamic properties of the clothed human body. He was Program Chair for 3DV 2018 and General Chair for 3DOR 2013 and STAG 2024.</p></div></div><h3>Modeling Humans and Garments: From Geometry to Simulation</h3><p>Realistic modeling and simulation of clothed humans play a key role in the creation of digital avatars for applications ranging from fashion and entertainment to computer animation. Despite significant progress, reproducing the complex appearance and behavior of garments remains challenging, particularly because of the wide variability of clothing and the fine-scale wrinkles produced by cloth deformation. Data-driven approaches offer a promising alternative by capturing real garment deformations through 3D scanning. However, directly integrating such observations into physics-based simulation pipelines is far from straightforward and typically requires substantial manual processing. In this talk, we will present recent approaches for decomposing captured clothed humans into their main semantic components, recovering both the underlying human body and the individual garments from 3D observations. We will then discuss how these reconstructed components can provide a bridge between real-world observations and physics-based models, paving the way for inverse cloth simulation and the estimation of garment behavior from captured data.</p></div>
-</section>
-<!-- Call Section -->
-<section id="call">
-<h2>
-     Call for Papers
-    </h2>
-<p>
-     The
-     <b>
-      4D Human Workshop (4DH)
-     </b>
-     invites submissions on methods and applications for reconstructing temporally
-  consistent 3D human models from image and video data.
-    </p>
-<p>
-     We welcome contributions addressing a broad range of topics related to 4D human reconstruction, including:
-    </p>
-<ul>
-<li>
-      4D human reconstruction from monocular or multi-view video
-     </li>
-<li>
-      Parametric human models (e.g., SMPL and related extensions)
-     </li>
-<li>
-      Neural representations (NeRF, 3D Gaussian Splatting, implicit models)
-     </li>
-<li>
-      Modeling of human motion and temporal consistency
-     </li>
-<li>
-      Human appearance, rendering, and relighting
-     </li>
-<li>
-      Multi-person and interaction modeling
-     </li>
-<li>
-      Datasets and benchmarks for dynamic human capture
-     </li>
-<li>
-      Applications in AR/VR, robotics, healthcare, and sports
-     </li>
-</ul>
-<p>
-     The workshop will be a half-day event and accepts two types of submissions:
-     <b>
-      original contributions
-     </b>
-     and
-     <b>
-      previously published papers
-     </b>
-     .
-    </p>
-<h3>
-     Original Contributions
-    </h3>
-<p>
-     Original papers will be included in the
-     <b>
-      ICIP 2026 proceedings
-     </b>
-     and will undergo a
-     <b>
-      double-blind peer review
-     </b>
-     process.
-    </p>
-<ul>
-<li>
-      Papers must not exceed
-      <b>
-       5 pages of technical content
-      </b>
-      , including all figures and references
-     </li>
-<li>
-      An optional
-      <b>
-       6th page
-      </b>
-      may be used for references only
-     </li>
-<li>
-      Submissions must follow the ICIP 2026 format
-     </li>
-<li>
-      Authors are encouraged to review the ICIP submission guidelines:
-      <a href="https://2026.ieeeicip.org/author-kit/">
-       Author Kit
-      </a>
-</li>
-</ul>
-<h3>
-     Previously Published Papers
-    </h3>
-<p>
-     Previously published work can be presented as
-     <b>
-      posters
-     </b>
-     during the workshop and will not be included in the proceedings.
-    </p>
-<ul>
-<li>
-      Submissions will be selected based on relevance and available presentation capacity
-     </li>
-<li>
-      Contributors are asked to submit a
-      <b>
-       2-page abstract
-      </b>
-      to the organizers at:
-      <a class="email-link" href="#">
-</a>
-</li>
-</ul>
-<h3>
-     Submission Instructions
-    </h3>
-<p>
-     Unpublished papers must be submitted through the official ICIP submission system:
-    </p>
-<p>
-<a href="https://icip2026.exordo.com/">
-      https://icip2026.exordo.com/
-     </a>
-</p>
-<p>
-     Authors should select the
-     <b>
-      Satellite Workshop Papers
-     </b>
-     track and choose the
-     <b>
-      4D Human Workshop
-     </b>
-     from the list of topics.
-    </p>
-<p>
-     Please note that
-     <b>
-      no rebuttal phase
-     </b>
-     will be included in the review process.
-    </p>
-<h3>
-     Important Dates
-    </h3>
-<ul>
-<li>
-<b>
-       Paper submission deadline:
-      </b>
-      May 13, 2026
-     </li>
-<li>
-<b>
-       Acceptance notification:
-      </b>
-      June 10, 2026
-     </li>
-<li>
-<b>
-       Camera-ready deadline:
-      </b>
-      July 1, 2026
-     </li>
-<li>
-<b>
-       Author registration deadline:
-      </b>
-      July 16, 2026
-     </li>
-</ul>
-</section>
-<!-- Schedule Section -->
-<section id="presentations">
-<h2>
-     Paper Presentations
-    </h2>
-<p>
-     All papers accepted for presentation at the workshop will be presented as
-     <b>
-      oral presentations
-     </b>
-     . Each paper will have
-     <b>
-      15 minutes for the presentation
-     </b>
-     , followed by questions from the audience.
-    </p>
-</section>
-<section id="schedule">
-<h2>
-     Schedule
-    </h2>
-<p>
-     September 13, 2026
-    </p>
-<table>
-<thead>
-<tr>
-<th>
-        Time
-       </th>
-<th>
-        Session
-       </th>
-<th>
-        Presentation
-       </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-        14:00–15:00
-       </td>
-<td>
-        Keynote
-       </td>
-<td>
-<strong>
-         Modeling Humans and Garments: From Geometry to Simulation
-        </strong>
-<br/>
-<span>
-         Umberto Castellani
-        </span>
-</td>
-</tr>
-<tr>
-<td>
-        15:30–15:45
-       </td>
-<td>
-        Invited Talk
-       </td>
-<td>
-<strong>
-         VolHuMe: a High-Resolution Large Scale Dataset of Volumetric Human Meshes
-        </strong>
-<br/>
-<span>
-         Giulia Martinelli
-        </span>
-</td>
-</tr>
-<tr>
-<td>
-        15:45–16:00
-       </td>
-<td>
-        Paper Oral
-       </td>
-<td>
-<strong>
-         AK-SLR: Attention-Guided Keypoint-Based Multimodal Sign Language Recognition
-        </strong>
-<br/>
-<span>
-         Yu-Cheng Chang, Shih-Hsuan Yang
-        </span>
-</td>
-</tr>
-<tr>
-<td>
-        16:00–16:15
-       </td>
-<td>
-        Paper Oral
-       </td>
-<td>
-<strong>
-         Frailty Classification Using SMPL Parameters Derived from Sparse Inertial Motion Capture
-        </strong>
-<br/>
-<span>
-         Agnieszka Szczesna, Arslan Amjad, Monika Błaszczyczyn, Henryk Josiński, Adam Świtoński
-        </span>
-</td>
-</tr>
-<tr>
-<td>
-        16:15–16:30
-       </td>
-<td>
-        Paper Oral
-       </td>
-<td>
-<strong>
-         Recurrence Quantification Analysis of the center of mass in gait-based sex recognition
-        </strong>
-<br/>
-<span>
-         Adam Świtoński, Dawid Hanak, Agnieszka Szczesna, Henryk Josiński, Konrad Wojciechowski
-        </span>
-</td>
-</tr>
-<tr>
-<td>
-        16:30–16:45
-       </td>
-<td>
-        Paper Oral
-       </td>
-<td>
-<strong>
-         Patient-Specific Digital Twin with Sensor Fusion for Robot-Assisted Interventions
-        </strong>
-<br/>
-<span>
-         Davide Nardi, Giulia Martinelli, Niccolò Bisagno, Daniele Fontanelli, Matteo Saveriano, Luigi Palopoli, Edoardo Lamon
-        </span>
-</td>
-</tr>
-</tbody>
-</table>
-</section>
-<!-- Organizers Section -->
-<section id="organizers">
-<h2>
-     Organizers
-    </h2>
-<div class="organizers-carousel">
-<div class="organizer">
-<img src="assets/imgs/avatar_giulia.jpg"/>
-<h3>
-       Giulia Martinelli
-      </h3>
-<p>
-       University of Trento
-      </p>
-</div>
-<div class="organizer">
-<img src="assets/imgs/avatar_nicolaG.jpg"/>
-<h3>
-       Nicola Garau
-      </h3>
-<p>
-       University of Trento
-      </p>
-</div>
-<div class="organizer">
-<img src="assets/imgs/avatar_nicola.jpeg"/>
-<h3>
-       Nicola Conci
-      </h3>
-<p>
-       University of Trento
-      </p>
-</div>
-</div>
-</section>
-<!-- Contact Section -->
-<section id="contact">
-<h2>
-     Contact
-    </h2>
-<p>
-     For further inquiries, please email us at
-     <a class="email-link" href="#">
-</a>
-</p>
-</section>
-</div>
-</body>
-<script>
-  const u = "giulia.martinelli-2";
-  const d = "unitn.it";
-  const email = `${u}@${d}`;
+  <section class="hero">
+    <h1>1st Workshop on 4D Humans (4DH)</h1>
+    <p class="subtitle">ICIP 2026 Satellite Workshop</p>
+  </section>
 
-  document.querySelectorAll(".email-link").forEach(link => {
-    link.href = `mailto:${email}`;
-    link.textContent = email;
-  });
- </script>
+  <div class="container">
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>4D Humans refers to the reconstruction of temporally consistent 3D human models, the 4th dimension being time. Starting from monocular or multi-view image sequences, the objective is to recover human shape, pose, motion, and appearance in a coherent representation.</p>
+      <p>Despite significant progress, current approaches follow different modeling paradigms, each with clear limitations. Parametric models such as SMPL provide structured and controllable representations but lack geometric detail, while neural methods such as NeRF and 3D Gaussian Splatting improve visual fidelity but struggle with controllability and canonical representations. High-quality digital humans achieve strong realism, but rely on complex acquisition setups or manual effort.</p>
+      <p>The 4D Human Workshop (4DH) focuses on image- and video-based approaches to 4D human reconstruction, addressing open challenges and emerging solutions toward realistic, controllable, and scalable human representations.</p>
+    </section>
+
+    <section id="speakers">
+      <h2>Keynote Speaker</h2>
+      <div class="speaker">
+        <div style="display:flex; align-items:flex-start; gap:24px; flex-wrap:wrap;">
+          <img alt="Umberto Castellani" src="assets/imgs/umberto_castellani.png" style="max-width:220px; width:100%; height:auto;" />
+          <div style="flex:1; min-width:260px;">
+            <h3>Umberto Castellani</h3>
+            <p><b>University of Verona, Italy</b></p>
+            <p>Umberto Castellani is Full Professor at the Computer Science Department of the University of Verona (Italy). His research focuses on 3D data processing at the intersection of computer vision, graphics, and machine learning, with particular expertise in 3D shape analysis and reconstruction from several acquisition systems. His work includes geometric methods for non-rigid object modeling, matching, and simulation, with a specialization in generative models for simulating the geometric and dynamic properties of the clothed human body. He was Program Chair for 3DV 2018 and General Chair for 3DOR 2013 and STAG 2024.</p>
+          </div>
+        </div>
+        <h3>Modeling Humans and Garments: From Geometry to Simulation</h3>
+        <p>Realistic modeling and simulation of clothed humans play a key role in the creation of digital avatars for applications ranging from fashion and entertainment to computer animation. Despite significant progress, reproducing the complex appearance and behavior of garments remains challenging, particularly because of the wide variability of clothing and the fine-scale wrinkles produced by cloth deformation. Data-driven approaches offer a promising alternative by capturing real garment deformations through 3D scanning. However, directly integrating such observations into physics-based simulation pipelines is far from straightforward and typically requires substantial manual processing. In this talk, we will present recent approaches for decomposing captured clothed humans into their main semantic components, recovering both the underlying human body and the individual garments from 3D observations. We will then discuss how these reconstructed components can provide a bridge between real-world observations and physics-based models, paving the way for inverse cloth simulation and the estimation of garment behavior from captured data.</p>
+      </div>
+    </section>
+
+    <section id="call">
+      <h2>Call for Papers</h2>
+      <p>The <b>4D Human Workshop (4DH)</b> invites submissions on methods and applications for reconstructing temporally consistent 3D human models from image and video data.</p>
+      <p>We welcome contributions addressing a broad range of topics related to 4D human reconstruction, including:</p>
+      <ul>
+        <li>4D human reconstruction from monocular or multi-view video</li>
+        <li>Parametric human models (e.g., SMPL and related extensions)</li>
+        <li>Neural representations (NeRF, 3D Gaussian Splatting, implicit models)</li>
+        <li>Modeling of human motion and temporal consistency</li>
+        <li>Human appearance, rendering, and relighting</li>
+        <li>Multi-person and interaction modeling</li>
+        <li>Datasets and benchmarks for dynamic human capture</li>
+        <li>Applications in AR/VR, robotics, healthcare, and sports</li>
+      </ul>
+      <p>The workshop will be a half-day event and accepts two types of submissions: <b>original contributions</b> and <b>previously published papers</b>.</p>
+
+      <h3>Original Contributions</h3>
+      <p>Original papers will be included in the <b>ICIP 2026 proceedings</b> and will undergo a <b>double-blind peer review</b> process.</p>
+      <ul>
+        <li>Papers must not exceed <b>5 pages of technical content</b>, including all figures and references</li>
+        <li>An optional <b>6th page</b> may be used for references only</li>
+        <li>Submissions must follow the ICIP 2026 format</li>
+        <li>Authors are encouraged to review the ICIP submission guidelines: <a href="https://2026.ieeeicip.org/author-kit/">Author Kit</a></li>
+      </ul>
+
+      <h3>Previously Published Papers</h3>
+      <p>Previously published work can be presented as <b>posters</b> during the workshop and will not be included in the proceedings.</p>
+      <ul>
+        <li>Submissions will be selected based on relevance and available presentation capacity</li>
+        <li>Contributors are asked to submit a <b>2-page abstract</b> to the organizers at: <a class="email-link" href="#"></a></li>
+      </ul>
+
+      <h3>Submission Instructions</h3>
+      <p>Unpublished papers must be submitted through the official ICIP submission system:</p>
+      <p><a href="https://icip2026.exordo.com/">https://icip2026.exordo.com/</a></p>
+      <p>Authors should select the <b>Satellite Workshop Papers</b> track and choose the <b>4D Human Workshop</b> from the list of topics.</p>
+      <p>Please note that <b>no rebuttal phase</b> will be included in the review process.</p>
+
+      <h3>Important Dates</h3>
+      <ul>
+        <li><b>Paper submission deadline:</b> May 13, 2026</li>
+        <li><b>Acceptance notification:</b> June 10, 2026</li>
+        <li><b>Camera-ready deadline:</b> July 1, 2026</li>
+        <li><b>Author registration deadline:</b> July 16, 2026</li>
+      </ul>
+    </section>
+
+    <section id="presentations">
+      <h2>Paper Presentations</h2>
+      <p>All papers accepted for presentation at the workshop will be presented as <b>oral presentations</b>. Each paper will have <b>15 minutes for the presentation</b>, followed by questions from the audience.</p>
+    </section>
+
+    <section id="schedule">
+      <h2>Schedule</h2>
+      <p>September 13, 2026</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Session</th>
+            <th>Presentation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="3"><strong>Welcome from the Chairs</strong></td>
+          </tr>
+          <tr>
+            <td>14:00–15:00</td>
+            <td>Keynote</td>
+            <td><strong>Modeling Humans and Garments: From Geometry to Simulation</strong><br /><span>Umberto Castellani</span></td>
+          </tr>
+          <tr>
+            <td>15:00–15:30</td>
+            <td>Invited Talk</td>
+            <td><strong>VolHuMe: a High-Resolution Large Scale Dataset of Volumetric Human Meshes</strong><br /><span>Giulia Martinelli</span></td>
+          </tr>
+          <tr>
+            <td>15:30–16:00</td>
+            <td>Break</td>
+            <td><strong>Coffee Break</strong></td>
+          </tr>
+          <tr>
+            <td>16:00–16:15</td>
+            <td>Paper Oral</td>
+            <td><strong>AK-SLR: Attention-Guided Keypoint-Based Multimodal Sign Language Recognition</strong><br /><span>Yu-Cheng Chang, Shih-Hsuan Yang</span></td>
+          </tr>
+          <tr>
+            <td>16:15–16:30</td>
+            <td>Paper Oral</td>
+            <td><strong>Frailty Classification Using SMPL Parameters Derived from Sparse Inertial Motion Capture</strong><br /><span>Agnieszka Szczesna, Arslan Amjad, Monika Błaszczyczyn, Henryk Josiński, Adam Świtoński</span></td>
+          </tr>
+          <tr>
+            <td>16:30–16:45</td>
+            <td>Paper Oral</td>
+            <td><strong>Recurrence Quantification Analysis of the center of mass in gait-based sex recognition</strong><br /><span>Adam Świtoński, Dawid Hanak, Agnieszka Szczesna, Henryk Josiński, Konrad Wojciechowski</span></td>
+          </tr>
+          <tr>
+            <td>16:45–17:00</td>
+            <td>Paper Oral</td>
+            <td><strong>Patient-Specific Digital Twin with Sensor Fusion for Robot-Assisted Interventions</strong><br /><span>Davide Nardi, Giulia Martinelli, Niccolò Bisagno, Daniele Fontanelli, Matteo Saveriano, Luigi Palopoli, Edoardo Lamon</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="organizers">
+      <h2>Organizers</h2>
+      <div class="organizers-carousel">
+        <div class="organizer">
+          <img alt="Giulia Martinelli" src="assets/imgs/avatar_giulia.jpg" />
+          <h3>Giulia Martinelli</h3>
+          <p>University of Trento</p>
+        </div>
+        <div class="organizer">
+          <img alt="Nicola Garau" src="assets/imgs/avatar_nicolaG.jpg" />
+          <h3>Nicola Garau</h3>
+          <p>University of Trento</p>
+        </div>
+        <div class="organizer">
+          <img alt="Nicola Conci" src="assets/imgs/avatar_nicola.jpeg" />
+          <h3>Nicola Conci</h3>
+          <p>University of Trento</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>For further inquiries, please email us at <a class="email-link" href="#"></a></p>
+    </section>
+  </div>
+
+  <script>
+    const u = "giulia.martinelli-2";
+    const d = "unitn.it";
+    const email = `${u}@${d}`;
+
+    document.querySelectorAll(".email-link").forEach(link => {
+      link.href = `mailto:${email}`;
+      link.textContent = email;
+    });
+  </script>
+</body>
 </html>
